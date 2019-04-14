@@ -1,0 +1,44 @@
+{
+  "name": "blog-ciel",
+  "private": true,
+  "description": "Travel blog of Clarisse and Loic.",
+  "version": "0.1.0",
+  "author": "Loic Say <loic.say@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.3.16",
+    "gatsby-image": "^2.0.29",
+    "gatsby-plugin-favicon": "^3.1.6",
+    "gatsby-plugin-manifest": "^2.0.17",
+    "gatsby-plugin-offline": "^2.0.24",
+    "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-plugin-sass": "^2.0.10",
+    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-source-filesystem": "^2.0.22",
+    "gatsby-transformer-remark": "^2.2.3",
+    "gatsby-transformer-sharp": "^2.1.13",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-photo-gallery": "^6.3.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
