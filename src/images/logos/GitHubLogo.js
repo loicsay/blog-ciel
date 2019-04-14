@@ -34,7 +34,8 @@ const GitHubLogo = ({ className, width }) => (
 );
 
 GitHubLogo.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  width: PropTypes.string
 };
 
 export default GitHubLogo;

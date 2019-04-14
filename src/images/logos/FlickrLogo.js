@@ -26,7 +26,8 @@ const FlickrLogo = ({ className, width }) => (
 );
 
 FlickrLogo.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  width: PropTypes.string
 };
 
 export default FlickrLogo;

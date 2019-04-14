@@ -1,0 +1,38 @@
+.header-container {
+  .progress-bar {
+    position: fixed;
+    z-index: 10;
+    height: 5px;
+    background: #dda33b;
+    // width is defined in with JS
+  }
+  .logo-container {
+    padding-top: 1.5%;
+    padding-left: 3%;
+    z-index: 10;
+    width: 100%;
+    height: 170px;
+    .logo-up {
+      stroke-width: 0;
+      stroke: transparent;
+      fill: #b1def9;
+      transition: all 0.5s ease;
+    }
+    .logo-down {
+      stroke-width: 10;
+      stroke: rgba(73, 73, 73, 0.3);
+      fill: rgba(255, 255, 255, 0.3);
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    .header-container {
+      .logo-container {
+        padding-top: 4%;
+      }
+    }
+  }
+}

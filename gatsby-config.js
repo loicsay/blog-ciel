@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog of Clarisse Damon`,
+    title: `Ciel - Clarisse & Loïc`,
     description: `French couple discovering cities around Asia. First step: Taipei, Taiwan.`,
     author: `@loicsay`
   },

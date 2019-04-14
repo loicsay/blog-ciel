@@ -1,7 +1,8 @@
 import React from "react";
 import Gallery from "react-photo-gallery";
 
-import PostListItem from "./PostListItem";
+import PostListItem from "./components/PostListItem";
+import "./styles.scss";
 
 const PostList = ({ formattedThumbnails }) => (
   <Gallery

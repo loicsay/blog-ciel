@@ -28,7 +28,7 @@ const GalleryItem = ({ margin, photo }) => {
 
   return (
     <div
-      className="gallery-item"
+      className="post-list-item"
       style={galleryItemStyle}
       onMouseEnter={handleOnMouseEnter}
       onMouseLeave={handleOnMouseLeave}

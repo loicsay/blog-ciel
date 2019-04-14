@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
-import usePrevious from "../utils";
-import { CielLogo } from "../images/logos";
+
+import "./styles.scss";
+import usePrevious from "../../../utils";
+import { CielLogo } from "../../../images/logos";
 
 const Header = () => {
   const [scrollUp, setScrollUp] = useState(true);
@@ -48,10 +50,6 @@ const Header = () => {
       </div>
     </header>
   );
-};
-
-Header.defaultProps = {
-  siteTitle: ``
 };
 
 export default Header;

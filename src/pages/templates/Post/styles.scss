@@ -1,0 +1,29 @@
+.post {
+  padding: 1.45rem;
+  font-family: "Spectral", sans-serif;
+  color: #363d42;
+  h1 {
+    font-family: inherit;
+    font-size: 45px;
+    font-weight: 300;
+    margin-bottom: 1.45rem;
+  }
+  h2 {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 1.45rem;
+  }
+  p {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  time {
+    display: block;
+    font-weight: 300;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 1.45rem;
+  }
+}

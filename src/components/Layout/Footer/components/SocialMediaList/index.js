@@ -1,11 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+import "./styles.scss";
 
 import {
   InstagramLogo,
   GitHubLogo,
   LinkedInLogo,
   FlickrLogo
-} from "../images/logos";
+} from "../../../../../images/logos";
 
 const SocialMediaList = ({
   name,
@@ -45,5 +48,13 @@ const SocialMediaList = ({
     </div>
   </div>
 );
+
+SocialMediaList.propTypes = {
+  name: PropTypes.string,
+  instagramLink: PropTypes.string,
+  flickrLink: PropTypes.string,
+  linkedinLink: PropTypes.string,
+  githubLink: PropTypes.string
+};
 
 export default SocialMediaList;

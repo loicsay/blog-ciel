@@ -1,17 +1,29 @@
 import React from "react";
-import Layout from "../../components/Layout";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
+import "./styles.scss";
+import Layout from "../../../components/Layout";
+
 const Post = props => {
   const post = props.data.markdownRemark;
-  const { title, date, image } = post.frontmatter;
+  const {
+    title,
+    description,
+    date,
+    location,
+    locationEmoji,
+    image
+  } = post.frontmatter;
+
+  console.log("image", image);
 
   return (
     <Layout>
-      <div>
+      <div className="post">
         <h1>{title}</h1>
-        <div>{date}</div>
+        <time>{`${date} in ${location} ${locationEmoji}`} </time>
+        <p>{description}</p>
         <Img fluid={image.childImageSharp.fluid} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
@@ -27,11 +39,13 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM Do YYYY")
+        date(formatString: "MMMM Do, YYYY")
         description
+        location
+        locationEmoji
         image {
           childImageSharp {
-            fluid(maxWidth: 1366) {
+            fluid(maxWidth: 956, maxHeight: 500) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -1,6 +1,7 @@
 import React from "react";
 
-import SocialMediaList from "./SocialMediaList";
+import "./styles.scss";
+import SocialMediaList from "./components/SocialMediaList";
 
 const Footer = () => (
   <footer className="footer-container">
