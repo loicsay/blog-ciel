@@ -20,13 +20,15 @@ const Header = () => {
 
   useEffect(() => {
     // Scroll up/down detection for the logo
-    scrollPourcentage > prevScrollPourcentage
+    scrollPourcentage > prevScrollPourcentage &&
+    // Handles the rebound effect on Safari
+    scrollPourcentage > 0
       ? setScrollUp(false)
-      : setScrollUp(true);
+      : scrollPourcentage < 100 && setScrollUp(true);
   }, [scrollPourcentage]);
 
   const handleScroll = () => {
-    // Scrolling percentage for the scrolling indicator
+    // Scrolling percentage of the scroll indicator
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
     const height =

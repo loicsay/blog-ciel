@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
 
 import "./styles.scss";
 import Layout from "../../../components/Layout";
@@ -13,19 +12,18 @@ const Post = props => {
     date,
     location,
     locationEmoji,
-    image
   } = post.frontmatter;
-
-  console.log("image", image);
 
   return (
     <Layout>
       <div className="post">
         <h1>{title}</h1>
-        <time>{`${date} in ${location} ${locationEmoji}`} </time>
+        <time>{`${date} | ${location} ${locationEmoji}`} </time>
         <p>{description}</p>
-        <Img fluid={image.childImageSharp.fluid} />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          className="content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </div>
     </Layout>
   );
@@ -39,17 +37,10 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "MMMM Do YYYY")
         description
         location
         locationEmoji
-        image {
-          childImageSharp {
-            fluid(maxWidth: 956, maxHeight: 500) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }

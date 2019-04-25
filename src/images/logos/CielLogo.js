@@ -23,4 +23,8 @@ CielLogo.propTypes = {
   className: PropTypes.string
 };
 
+CielLogo.defaultProps = {
+  className: ""
+};
+
 export default CielLogo;

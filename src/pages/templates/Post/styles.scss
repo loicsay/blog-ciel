@@ -17,13 +17,35 @@
   p {
     text-align: justify;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
   }
   time {
     display: block;
     font-weight: 300;
-    font-size: 18px;
-    font-style: italic;
+    font-size: 14px;
+    color: #7d8185;
+    font-weight: 700;
     margin-bottom: 1.45rem;
+  }
+
+  .content {
+    .custom-block {
+      width: 80%;
+      &.left {
+        .gatsby-resp-image-wrapper {
+          margin-left: 0 !important;
+        }
+      }
+      &.right {
+        margin-left: auto;
+        h2 {
+          width: fit-content;
+          margin-left: auto;
+        }
+        .gatsby-resp-image-wrapper {
+          margin-right: 0 !important;
+        }
+      }
+    }
   }
 }
