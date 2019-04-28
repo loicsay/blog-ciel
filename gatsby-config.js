@@ -2,7 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `Ciel - Clarisse & Loïc`,
     description: `French couple discovering cities around Asia. First step: Taipei, Taiwan.`,
-    author: `@loicsay`
+    author: `@loicsay`,
+    url: "https://blog-ciel.netlify.com/",
+    titleTemplate: ""
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
