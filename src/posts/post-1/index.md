@@ -8,7 +8,7 @@ image: hkg.jpg
 ---
 
 [[left]]
-| ![Clarisse](clarisse.jpg)
+| ![Random Hong Kong colorful buildings in Central. © Loïc Say](hkg.jpg)
 | ## Build modern websites
 | Don't build a website with last decade's tech. The future of the web is mobile,
 | JavaScript and APIs—the
@@ -22,7 +22,7 @@ image: hkg.jpg
 | versions of Lorem Ipsum.
 
 [[right]]
-| ![HongKong](hkg.jpg)
+| ![Clarisse in front of the Versaille's garden © Loïc Say](clarisse.jpg)
 | ## Why do we use it?
 | It is a long established fact that a reader will be distracted by the readable
 | content of a page when looking at its layout. The point of using Lorem Ipsum

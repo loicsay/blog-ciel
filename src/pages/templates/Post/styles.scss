@@ -22,28 +22,87 @@
   time {
     display: block;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     color: #7d8185;
     font-weight: 700;
     margin-bottom: 1.45rem;
   }
-
   .content {
     .custom-block {
-      width: 80%;
+      max-width: 900px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      figure {
+        position: relative;
+      }
+      figcaption {
+        position: absolute;
+        top: -10px;
+        width: fit-content;
+        user-select: none;
+        font-family: "Karla", sans-serif;
+        color: #363d42;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
       &.left {
+        figcaption {
+          transform: rotate(90deg);
+          transform-origin: left;
+          left: 100%;
+          margin-left: 10px;
+        }
         .gatsby-resp-image-wrapper {
           margin-left: 0 !important;
         }
       }
       &.right {
         margin-left: auto;
+        figcaption {
+          transform: rotate(-90deg);
+          transform-origin: right;
+          right: 100%;
+          margin-right: 10px;
+        }
         h2 {
           width: fit-content;
           margin-left: auto;
         }
         .gatsby-resp-image-wrapper {
           margin-right: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .post {
+    .content {
+      .custom-block {
+        figcaption {
+          position: relative;
+          width: 100%;
+          padding-top: 10px;
+          transform: rotate(0deg);
+          text-align: center;
+        }
+        &.left {
+          margin: auto;
+          figcaption {
+            transform: rotate(0);
+            left: auto;
+          }
+        }
+        &.right {
+          margin: auto;
+          figcaption {
+            transform: rotate(0);
+            right: auto;
+          }
+          h2 {
+            margin-left: 0;
+          }
         }
       }
     }
