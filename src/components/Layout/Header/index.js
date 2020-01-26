@@ -7,9 +7,9 @@ import { CielLogo } from "../../../images/logos";
 
 const Header = () => {
   const [scrollUp, setScrollUp] = useState(true);
-  const [scrollPourcentage, setScrollPourcentage] = useState(0);
+  const [scrollPercentage, setScrollPercentage] = useState(0);
 
-  const prevScrollPourcentage = usePrevious(scrollPourcentage);
+  const prevScrollPercentage = usePrevious(scrollPercentage);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -20,12 +20,12 @@ const Header = () => {
 
   useEffect(() => {
     // Scroll up/down detection for the logo
-    scrollPourcentage > prevScrollPourcentage &&
+    scrollPercentage > prevScrollPercentage &&
     // Handles the rebound effect on Safari
-    scrollPourcentage > 0
+    scrollPercentage > 0
       ? setScrollUp(false)
-      : scrollPourcentage < 100 && setScrollUp(true);
-  }, [scrollPourcentage]);
+      : scrollPercentage < 100 && setScrollUp(true);
+  }, [scrollPercentage, prevScrollPercentage]);
 
   const handleScroll = () => {
     // Scrolling percentage of the scroll indicator
@@ -34,17 +34,14 @@ const Header = () => {
     const height =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
-    const newScrollPourcentage = (winScroll / height) * 100;
+    const newScrollPercentage = (winScroll / height) * 100;
 
-    setScrollPourcentage(newScrollPourcentage);
+    setScrollPercentage(newScrollPercentage);
   };
 
   return (
     <header className="header-container">
-      <div
-        className="progress-bar"
-        style={{ width: `${scrollPourcentage}%` }}
-      />
+      <div className="progress-bar" style={{ width: `${scrollPercentage}%` }} />
       <div className="logo-container">
         <Link to="/">
           <CielLogo className={scrollUp ? "logo-up" : "logo-down"} />
